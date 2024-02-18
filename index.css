@@ -32,19 +32,22 @@ padding-top: 10px;
     overflow: hidden;
    
 }
-.search{
-    margin-left: 500px;
-    margin-right: 500PX;
-    padding-left: 450px;
-    margin-top: 10px;
-    font-size: 20px;
-    border: 1px solid gray;
-}
+
+
 .filter-btn{
-    margin: 20px 110px;
+    
     cursor: pointer;
+    margin-left: 10px;
+    
+    
 
 }
+.filter{
+    margin: 10px;
+    display: flex;
+   
+}
+
 
 .res-card-image{
     width: 100%;
@@ -60,4 +63,23 @@ padding-top: 10px;
     
     display: flex;
     flex-wrap: wrap;
+}
+.shimmer-container{
+    padding-top: 30px;
+    padding-left: 110px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.shimmer-card{
+    width:300px;
+    padding: 2px 2px 20px 2px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    height: 400px;
+    background-color: rgb(238, 232, 232);
+    animation-fill-mode: forwards;
+    
+}
+.login{
+    cursor: pointer;
 }
