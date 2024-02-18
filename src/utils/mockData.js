@@ -12,10 +12,10 @@ const resList=[
           "Beverages",
           "Desserts"
         ],
-        "avgRating": 4.6,
+        "avgRating": 3.6,
         "veg": true,
         "parentId": "21001",
-        "avgRatingString": "4.6",
+        "avgRatingString": "3.6",
         "totalRatingsString": "5K+",
         "promoted": true,
         "adTrackingId": "cid=11298465~p=2~eid=0000018d-afbe-171c-163d-0afd00b50218~srvts=1708050487068~45995",
@@ -104,7 +104,7 @@ const resList=[
         ],
         "avgRating": 4.5,
         "parentId": "236243",
-        "avgRatingString": "4.5",
+        "avgRatingString": "3.5",
         "totalRatingsString": "10K+",
         "sla": {
           "deliveryTime": 24,
@@ -199,7 +199,7 @@ const resList=[
           "Indian",
           "Chinese"
         ],
-        "avgRating": 4.3,
+        "avgRating": 3.3,
         "veg": true,
         "parentId": "6959",
         "avgRatingString": "4.3",
@@ -284,9 +284,9 @@ const resList=[
         "cuisines": [
           "South Indian"
         ],
-        "avgRating": 4.4,
+        "avgRating": 3.4,
         "parentId": "20129",
-        "avgRatingString": "4.4",
+        "avgRatingString": "3.4",
         "totalRatingsString": "5K+",
         "sla": {
           "deliveryTime": 23,
@@ -487,7 +487,7 @@ const resList=[
         ],
         "avgRating": 4.5,
         "parentId": "898",
-        "avgRatingString": "4.5",
+        "avgRatingString": "3.9",
         "totalRatingsString": "10K+",
         "sla": {
           "deliveryTime": 25,
@@ -586,7 +586,7 @@ const resList=[
           "Chaat",
           "Healthy Food"
         ],
-        "avgRating": 4.6,
+        "avgRating": 3.6,
         "parentId": "21147",
         "avgRatingString": "4.6",
         "totalRatingsString": "10K+",
@@ -787,7 +787,7 @@ const resList=[
           "Indian",
           "Chinese"
         ],
-        "avgRating": 4.3,
+        "avgRating": 3.3,
         "veg": true,
         "parentId": "5697",
         "avgRatingString": "4.3",
@@ -1468,7 +1468,7 @@ const resList=[
         ],
         "avgRating": 4.5,
         "parentId": "211770",
-        "avgRatingString": "4.5",
+        "avgRatingString": "3.5",
         "totalRatingsString": "10K+",
         "sla": {
           "deliveryTime": 28,
