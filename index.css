@@ -1,7 +1,7 @@
 .header{
     display: flex;
     /* justify-content: space-between; */
-    background-color: black;
+    background-color: rgb(225, 225, 225);
     height: 100px;
    
 }
@@ -22,6 +22,7 @@ padding-top: 10px;
     margin: 10px;
     color: white;
     font-size: large;
+    
 }
 .res-card{
     width:300px;
@@ -82,4 +83,7 @@ padding-top: 10px;
 }
 .login{
     cursor: pointer;
+}
+.w3-button{
+
 }

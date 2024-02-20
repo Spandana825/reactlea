@@ -2,6 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
+import About from "./components/about";
+import Contact from "./components/contact";
+import Errorpage from "./components/errorpage";
+import { createBrowserRouter,RouterProvider, Outlet } from "react-router-dom";
 //header
 //--logo
 //--nav items
@@ -13,31 +17,41 @@ import Body from "./components/Body";
 //--------img
 //--------name,start rating,cuisune
 
-
-const RestaurantCard=(props)=>{
-   const {resData}=props;
-   const {cloudinaryImageId,name,cuisines,avgRating}=resData?.info;
-   const {deliveryTime}=resData?.info.sla;
-   return(
-      <div className="res-card" style={stylecard}>
-         
-         <img className="res-card-image"src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId}/>
-         <h3>{name}</h3>
-         <h3>{cuisines.join(",")}</h3>
-         <h3>{avgRating}{" "}stars</h3>
-         <h3>{deliveryTime}{" "}minutes</h3>
-      </div>
-   );
-};
-
 const AppLayout=()=>{
    return (
       <div className="app">
          <Header/>
-         <Body/>
+         <Outlet/>
 
       </div>
    )
 }
+
+const appRouter=createBrowserRouter([
+   {
+      path:"/",
+      element:<AppLayout/>,
+      children:[
+         {
+            path:"/",
+            element:<Body/>,
+
+         },
+         {
+            path:"/about",
+            element:<About/>,
+      
+         },
+         {
+            path:"/contact",
+            element:<Contact/>,
+         },
+
+      ],
+      errorElement:<Errorpage/>
+
+   },
+   
+]);
 const root=ReactDOM.createRoot(document.getElementById("root"));
- root.render(<AppLayout/>);
+ root.render(<RouterProvider router={appRouter}/>);

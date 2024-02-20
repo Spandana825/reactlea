@@ -12,12 +12,12 @@ const Body=()=>{
       fetchData();
    },[]);
    const fetchData=async()=>{
-      const data=await fetch("https://www.swiggy.com/mapi/homepage/getCards?lat=12.9351929&lng=77.62448069999999"
+      const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       const json=await data.json();
       console.log(json);
-      SetListofRestaurants(json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
-      setfilteredRestaurant(json?.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants);
+      SetListofRestaurants(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+      setfilteredRestaurant(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
    };
    if(ListofRestaurants.length===0){
       return <Shimmer/>;
