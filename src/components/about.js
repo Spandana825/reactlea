@@ -1,8 +1,7 @@
 const About=()=>{
     return(
         <div> 
-            <h1>hello</h1>
-            <h1>hi i am about us page</h1> 
+           <h1>hi ,i am about page</h1>
         </div>
         
     );
