@@ -1,7 +1,11 @@
+import User from "./user";
+import UserClass from "./userclass";
+
 const About=()=>{
     return(
         <div> 
-           <h1>hi ,i am about page</h1>
+           <User/>
+           <UserClass/>
         </div>
         
     );
