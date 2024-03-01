@@ -21,8 +21,23 @@ const RestaurantMenu = () => {
     };
   if(resinfo===null) return <Shimmer/>
 
-  const { name, city, cuisines, costForTwoMessage } = (resinfo?.cards?.[2]?.card?.card?.info) || {};
-  const { itemCards } = (resinfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card) || {};
+  // const { name, city, cuisines, costForTwoMessage } = (resinfo?.cards?.[2]?.card?.card?.info) || {};
+  // const { itemCards } = (resinfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card) || {};
+
+// console.log(name);
+// console.log(itemCards);
+//   return(
+//     <div>
+//         <h1>{name}</h1>
+//         <h2> {city}</h2>
+//         <h2>{cuisines?.join(",")}</h2>
+//         <h2>{costForTwoMessage}</h2>
+//         <h1>menu</h1>
+//         <ul>
+//           {itemCards?.map((item)=><li key={item?.card?.info?.id}>{item?.card?.info?.name}-Rs.{item?.card?.info?.price/100}</li>)}
+//         </ul>
+const { name, city, cuisines, costForTwoMessage } = (resinfo?.cards?.[0]?.card?.card?.info) || {};
+  const { itemCards } = (resinfo?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card) || {};
 
 console.log(name);
 console.log(itemCards);
@@ -34,7 +49,7 @@ console.log(itemCards);
         <h2>{costForTwoMessage}</h2>
         <h1>menu</h1>
         <ul>
-          {itemCards?.map((item)=><li key={item?.card?.info?.id}>{item?.card?.info?.name}-Rs.{item?.card?.info?.price/10}</li>)}
+          {itemCards?.map((item)=><li key={item?.card?.info?.id}>{item?.card?.info?.name}-Rs.{item?.card?.info?.price/100}</li>)}
         </ul>
         
 
