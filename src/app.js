@@ -2,11 +2,13 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
-import About from "./components/about";
+// import About from "./components/about";
 import Contact from "./components/contact";
 import Errorpage from "./components/errorpage";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter,RouterProvider, Outlet } from "react-router-dom";
+import { lazy,Suspense } from "react";
+// import Grocery from "./components/Grocery";
 //header
 //--logo
 //--nav items
@@ -17,7 +19,8 @@ import { createBrowserRouter,RouterProvider, Outlet } from "react-router-dom";
 //------resto cards
 //--------img
 //--------name,start rating,cuisune
-
+const Grocery=lazy(()=>import("./components/Grocery"));
+const About=lazy(()=>import("./components/about"));
 const AppLayout=()=>{
    return (
       <div className="app">
@@ -40,12 +43,16 @@ const appRouter=createBrowserRouter([
          },
          {
             path:"/about",
-            element:<About/>,
+            element:<Suspense fallback={<h1>loading</h1>}><About/></Suspense>
       
          },
          {
             path:"/contact",
             element:<Contact/>,
+         },
+         {
+            path:"/grocery",
+            element:<Suspense fallback={<h1>loading</h1>}><Grocery/></Suspense>
          },
          {
             path:"/restaurants/:resId",

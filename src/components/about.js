@@ -4,8 +4,8 @@ import UserClass from "./userclass";
 const About=()=>{
     return(
         <div> 
-           <User/>
-           <UserClass/>
+           <User name={"abc from functional"}/>
+           <UserClass name={"abc from class"} location={"chennai form class"}/>
         </div>
         
     );
