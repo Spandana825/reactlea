@@ -1,10 +1,10 @@
 import RestaurantCard,{withnonveglabel}  from "./RestaurantCard";
 import resList from "../utils/mockData";
-import { useState,useEffect } from "react";
+import { useState,useEffect,useContext } from "react";
 import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
-
+import Usercontext from "../utils/Usercontext";
 const Body=()=>{
    
    const [ListofRestaurants,SetListofRestaurants]=useState([]);
@@ -28,7 +28,7 @@ const Body=()=>{
       return(
          <h1>no internet connection</h1>
       )
-   
+   const {loggedInUser,setUserName}=useContext(Usercontext);
    return ListofRestaurants.length===0?(
     <Shimmer/>
    ):
@@ -54,6 +54,13 @@ const Body=()=>{
                 console.log(filteredList);
                 setfilteredRestaurant(filteredList);
             }}>Top Rated Restaurants</button>
+          </div>
+          <div className="search ml-80 p-4 flex items-center">
+            <label className="p-2">ordering for</label>
+            <input 
+            className="border border-black " 
+            value={loggedInUser}
+            onChange={(e)=>setUserName(e.target.value)}/>
           </div>
             
           </div>
