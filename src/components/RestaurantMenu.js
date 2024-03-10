@@ -11,6 +11,7 @@ import RestoCategories from './RestoCategories';
 const RestaurantMenu = () => {
   const [resinfo,setresinfo]=useState(null);
   const {resId}=useParams();
+  const [showIndex,setshowIndex]=useState(null);
   console.log(resId);
   // const resinfo=useRestaurantMenu(resId);
     useEffect(()=>{
@@ -67,7 +68,15 @@ console.log(categories)
         </ul>
          */}
          {/*===========lets use accordian=========== */}
-       {categories.map((category)=>(<RestoCategories data={category?.card?.card}/>))}
+       {categories.map((category,index)=>(
+        //controlled component
+       <RestoCategories 
+       key={category?.card?.card.title}
+       data={category?.card?.card} 
+       showItems={index===showIndex? true: false}
+       setshowIndex={()=>setshowIndex(index)}
+       />
+       ))}
       
     </div>
   )
