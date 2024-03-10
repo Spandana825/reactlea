@@ -16,6 +16,16 @@ const RestaurantCard=(props)=>{
        </div>
     );
  };
-
+ //higher order componenyt-- with veg label  
+export const withnonveglabel=(RestaurantCard)=>{
+   return(props)=>{
+      return(
+       <div>
+         <label className="absolute bg-black text-white  h-7 p-2 m-2 pt-0 rounded-lg"> open</label>
+         <RestaurantCard {...props}/>
+       </div>
+      );
+   }
+}
  
  export default RestaurantCard;
